@@ -82,3 +82,5 @@ if (method == 'GET' && resource == "products") {
   const data = await response.json();
   console.log(data);
 }
+
+
