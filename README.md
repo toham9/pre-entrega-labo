@@ -13,6 +13,20 @@ Para ejecutar este script, solo necesitas tener instalado:
 * Un terminal tipo **Git Bash** o cualquier terminal compatible con comandos de `npm` y pase de argumentos.
 
 ---
+## EJEMPLOS DE EJECUCION
+## #####################
+
+GET
+npm start GET products/6
+
+POST
+npm start POST products "Producto Nro 2" 110 "Categoria Nro 2"
+
+PUT (modificación, se pasan todos los datos del producto)
+npm start PUT products/3 "Producto Nro 3" 150 "Categoria Nro 42"
+
+DELETE
+npm start DELETE products/7
 
 # node.js: version 22.19.0
-# npn: version 10.9.3
+# npm: version 10.9.3
