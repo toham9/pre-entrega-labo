@@ -7,6 +7,32 @@ let [, , method, resource] = process.argv;
 method = method.toUpperCase();
 resource = resource.toLowerCase();
 
+// products/POST
+if (method == 'POST' && resource == 'products') {
+//  const product = { 
+//    title: process.argv[4], 
+//    price: process.argv[5], 
+//   category: process.argv[6] 
+//  };
+  const [title, price, category] = params;
+
+  const product = {
+    title,
+    price,
+    category,
+  };
+
+  fetch('https://fakestoreapi.com/products', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(product)
+  })
+    .then(response => response.json())
+    .then(data => console.log(data));
+    
+}
+
+
 // products/5
 if (method == 'GET' && resource.startsWith('products/')) {
   let id = resource.split('/')[1];
